@@ -4,6 +4,8 @@
 
 Once you've identified the correct number of columns for a UNION-based SQLi attack, the *next mission* is to figure out **which column accepts string data**. PortSwigger’s lab gives us a random string, and our job is to make that string appear on the page by injecting it into the right column.
 
+[Lab Link](https://portswigger.net/web-security/sql-injection/union-attacks/lab-find-column-containing-text) <br/>
+
 ![Cover](SQLi_PoC_/Cover.jpeg)
 
 ---
